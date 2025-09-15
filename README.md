@@ -10,6 +10,20 @@ Full-stack To-Do app with categories. React/Vite frontend, Express + MongoDB bac
 - Node 18+ and npm
 - MongoDB running locally (or a connection string)
 
+## Backend (development)
+```bash
+cd backend
+npm i
+# first time only
+cp .env.example .env
+# ensure PORT=5001, set MONGO_URI and JWT_SECRET
+npm start   # nodemon index.js
+```
+Verify:
+```bash
+curl -i http://localhost:5001/
+```
+
 ## Quick Start
 ```bash
 # 1) Backend
@@ -51,6 +65,14 @@ Tasks (requires header `x-auth-token: <JWT>`)
 - CORS is configured to allow any localhost/127.0.0.1 port in dev.
 - Mongoose v8 compatible (no deprecated `findByIdAndRemove`).
 
+## Development vs Production (frontend)
+For development, run the dev server (hot reload):
+```bash
+cd frontend
+npm run dev
+```
+
+For a production build and local preview:
 ## Build / Preview (frontend)
 ```bash
 cd frontend
