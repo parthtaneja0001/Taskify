@@ -1,0 +1,19 @@
+# Node
+node_modules/
+*.log
+
+# Vite
+frontend/.vite/
+frontend/dist/
+
+# Builds
+dist/
+.build/
+.cache/
+
+# Env
+*.env
+backend/.env
+
+# OS/Editor
+.DS_Store
